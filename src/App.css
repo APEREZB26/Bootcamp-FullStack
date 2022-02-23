@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins' , sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(20, 20, 20);
+}
+
+.card-header h4{
+    color: black;
+}
+
+.card-body p{
+    color: black;
+}
