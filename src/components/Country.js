@@ -1,4 +1,4 @@
-export const Country = ({id,title,body}) =>{
+export const Country = ({id,content,date}) =>{
     const style ={
         border: "2px solid aliceblue",
         margin: "10px",
@@ -6,8 +6,8 @@ export const Country = ({id,title,body}) =>{
     }
     return(
         <div style={style}>
-            <h1>{title}</h1>
-            <p>{body}</p>
+            <h1>{date}</h1>
+            <p>{content}</p>
             <b>ID: {id}</b>
         </div>
     )
