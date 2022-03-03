@@ -9,6 +9,7 @@ const App = () => {
   const [country, setCountry] = useState([]);
   const [pais, setPais] = useState([]);
   const [newCountry, setNewcountry] = useState(0);
+  const [selectedCountry, setSelectedCountry] = useState([]);
 
   useEffect(() => {
     getAllCountry().then((country) => {
@@ -44,10 +45,11 @@ const App = () => {
     });
     setNewcountry("");
   };
-
-  const selectedCountry = () =>{
-    const select = document.getElementById('option').value().json();
-    return select;
+  
+  const select = () =>{
+    const select = document.getElementById('option')
+    const selected = select.value;
+    setSelectedCountry(selected)
   }
 
   return (
@@ -64,7 +66,8 @@ const App = () => {
         );
       })}
       <p>{newCountry}</p>
-      <select style={st} id='option' onChange={selectedCountry}>
+      <p>{selectedCountry}</p>
+      <select style={st} id='option' onChange={select}>
         {pais.map((pais) => { 
           return <option key={pais.cca2} style={st}>{pais.name.common}</option>;
         })}
